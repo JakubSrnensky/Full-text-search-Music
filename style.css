@@ -1,0 +1,173 @@
+body{
+    background: rgb(43,49,65);
+    background: linear-gradient(260deg, rgba(43,49,65,1) 0%, rgba(26,33,37,1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    color:white;
+}
+
+.wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+    padding:5% 2% 2% 2%;
+}
+
+#search-field{
+    width: 100%;
+    border-radius:100px;
+    padding:20px 25px;
+    outline: none;
+    border:0px;
+    font-weight: bold;
+    font-size: 14px;
+    color:white;
+    background-color: #14171B;
+}
+
+/* Favorite songs */
+
+.favorite-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top:20px;
+}
+
+.favorite-wrapper .title{
+    color:#CCCCCC;
+}
+
+.favorite-wrapper .count{
+    color:white;
+    font-size: 18px;
+    padding:0px 20px;
+}
+
+.favorite-wrapper button{
+    outline: none;
+    border: 0px;
+    background-color:#373F53;
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding:7px 15px;
+    cursor: pointer;
+}
+
+/* List of searching */
+
+.list-results{
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.song{
+    align-items: center;
+    padding:20px 0px;
+    color:#CCCCCC;
+    font-size: 15px;
+}
+
+.song:not(:last-child){
+    border-bottom:1px solid #14171B;
+}
+
+.song > .row{
+  display: flex;
+  align-items: center;
+}
+
+.song .thumbnail{
+    padding-right: 20px;
+}
+
+.song .row.names{
+    width: 100%;
+}
+
+.song .row.icons{
+    text-align: center;
+}
+
+.song .name-song{
+    font-weight: bold;
+    color:white;
+}
+
+.song .name-artist{
+    font-size: 13px;
+    padding-top:3px;
+}
+
+.song.hide{
+    display: none;
+}
+
+.song .like{
+    width: 20px;
+    height: 18px;
+    background-image:url(heart.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 2px 0px;
+    display: inline-block;
+}
+
+.song .like.love-it{
+    background-image:url(heart_full.svg);
+}
+
+.song .play{
+    cursor: pointer;
+}
+
+.song .play{
+    width: 15px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-image:url(play.svg);
+    margin: 2px 0px;
+    display: inline-block;
+}
+
+.song .play.close{
+    height: 15px;
+    background-image:url(cross.svg);
+}
+
+.song audio{
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+}
+
+.song audio.show{
+    display: block;
+}
+
+/* Pagination */
+
+.pagination{
+    padding:0;
+    display: flex;
+    color:white;
+    justify-content: center;
+    list-style: none;
+    font-weight: bold;
+}
+
+.pagination li{
+    padding:0px 10px;
+}
